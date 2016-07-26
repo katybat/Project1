@@ -8,7 +8,8 @@ app.use(express.static('./public'));
 app.use(bodyParser());
 
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://localhost/project1');
+//mongoose.connect('mongodb://localhost/project1');
+mongoose.connect('mongodb://okcoders:okcoders@okcoders.co/katy');
 
 
 app.listen(8080, function() {
