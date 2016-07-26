@@ -8,13 +8,19 @@ app.use(express.static('./public'));
 app.use(bodyParser());
 
 mongoose.Promise = Promise;
-//mongoose.connect('mongodb://localhost/project1');
+//mongoose.connect('mongodb://localhost/project1'); //updated to below for Heroku
 mongoose.connect('mongodb://okcoders:okcoders@okcoders.co/katy');
 
+//add below for heroku
+var port = process.env.PORT||8080;
+app.listen(port, function() {
+		console.log('Listening on http://localhost: '+ port);
+});
 
+/* Replaced by above PORT for the Heroku connection
 app.listen(8080, function() {
 		console.log('Listening on 8080');
-});
+});*/
 
 var BlogPost = mongoose.model('Post', {
 	title: String,
