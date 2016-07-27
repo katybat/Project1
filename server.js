@@ -8,7 +8,7 @@ app.use(express.static('./public'));
 app.use(bodyParser());
 
 mongoose.Promise = Promise;
-//mongoose.connect('mongodb://localhost/project1'); //updated to below for Heroku
+//mongoose.connect('mongodb://localhost/project1'); //updated to below for Herokul
 mongoose.connect('mongodb://okcoders:okcoders@okcoders.co/katy');
 
 //add below for heroku
